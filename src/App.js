@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import logo from "./logo.svg";
-import { Navbar } from 'reactstrap';
+import { Navbar, NavbarBrand  } from 'reactstrap';
 import "./App.css";
 
 class App extends Component {
@@ -9,7 +9,8 @@ class App extends Component {
       <div className="App">
         <Navbar dark color="primary">
           <div className="container">
-            {/* <NavbarBrand href="/"> Ristro ConFusion </NavbarBrand> */}
+          <NavbarBrand>Restro ConFus</NavbarBrand>
+            
           </div>
         </Navbar>
       </div>
