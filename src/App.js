@@ -14,6 +14,8 @@ class App extends Component {
             
           </div>
         </Navbar>
+
+        <Menu />
       </div>
     );
   }
