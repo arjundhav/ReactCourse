@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "reactstrap";
 
+import DishDetail from "./DishdetailComponent";
 //The components acts as a unit for gathering together a bunch of React elements with a common purpose.
 class Menu extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Menu extends Component {
     if (dish != null)
       return (
         <Card>
-          <CardImg top src={dish.image} alt={dish.name} />
+          <CardImg width="100%" src={dish.image} alt={dish.name} />
           <CardBody>
             <CardTitle>{dish.name}</CardTitle>
             <CardText>{dish.description}</CardText>
@@ -53,9 +54,7 @@ class Menu extends Component {
       <div className="container">
         <div className="row">{menu}</div>
         <div className="row">
-          <div className="col-12 col-md-5 m-1">
-            {this.renderDish(this.state.selectedDish)}
-          </div>
+            <DishDetail dish={this.state.selectedDish} />
         </div>
       </div>
     );
