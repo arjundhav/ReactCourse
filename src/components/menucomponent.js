@@ -8,18 +8,10 @@ import {
   CardTitle,
 } from "reactstrap";
 
-import DishDetail from "./DishdetailComponent";
 //The components acts as a unit for gathering together a bunch of React elements with a common purpose.
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      selectedDish: null,
-    };
-  }
-
-  onDishSelect(dish) {
-    this.setState({ selectedDish: dish });
   }
 
   renderDish(dish) {
@@ -40,7 +32,7 @@ class Menu extends Component {
     const menu = this.props.dishes.map((dish) => {
       return (
         <div className="col-12 col-md-5 m-1">
-          <Card key={dish.id} onClick={() => this.onDishSelect(dish)}>
+          <Card onClick={() => this.props.onClick(dish.id)}>
             <CardImg width="100%" src={dish.image} alt={dish.name} />
             <CardImgOverlay>
               <CardTitle>{dish.name}</CardTitle>
@@ -53,32 +45,9 @@ class Menu extends Component {
     return (
       <div className="container">
         <div className="row">{menu}</div>
-        <div className="row">
-            <DishDetail dish={this.state.selectedDish} />
-        </div>
       </div>
     );
   }
 }
 
 export default Menu;
-
-// Basic Structure of React Component
-// import React, { Component } from 'react';
-
-// class Menu extends Component{
-//     constructor(props) {
-//         super(props);
-//    this.state = {
-//     state stores in. Properties related to this component that we can make use of.
-//    }
-//     }
-
-//     render() {
-//         return(
-
-//         );
-//     }
-// }
-
-// export default Menu;
