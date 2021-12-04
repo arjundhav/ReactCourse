@@ -23,7 +23,9 @@ function RenderDish({ dish }) {
       </div>
     );
   } else {
+
     return <div></div>;
+
   }
 }
 
@@ -61,6 +63,7 @@ function RenderDish({ dish }) {
     const DishDetail = (props) => {
 
         const dish = props.dish
+
         if (dish == null) {
             return (<div></div>);
         }
