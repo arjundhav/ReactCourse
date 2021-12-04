@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, jumbotron} from "reactstrap";
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem} from "reactstrap";
 import {  NavLink } from 'react-router-dom';
 
 class Header extends Component{
@@ -63,7 +63,7 @@ class Header extends Component{
                     </div>
                 </Navbar>
 
-                <jumbotron>
+                <div class="jumbotron">
                     <div className="container">
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
@@ -71,12 +71,12 @@ class Header extends Component{
                                 <p> 
                                     We take inspiration from te World's best cuisines, and create a unique 
                                     fusion experience. Our lipsmacking creations 
-                                    will ti ckle your culinary senses!
+                                    will tickle your culinary senses!
                                 </p>
                             </div>
                         </div>
                     </div>
-                </jumbotron>
+                </div>
             </React.Fragment>
         );
     }
