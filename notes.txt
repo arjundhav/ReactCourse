@@ -17,3 +17,7 @@
    import 'bootstrap-social/bootstrap-social.css';
 
 3. npm install react-router-dom@4.2.2   
+
+4.json-server: npm install json-server -g
+ To view database: json-server --watch db.json -p 3001 -d 2000
+                   json server db.json
